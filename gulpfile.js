@@ -1,6 +1,6 @@
-let project_folder = "dist";
-let source_folder = "src";
 
+let project_folder = require("path").basename(__dirname);
+let source_folder = "src";
 let fs = require("fs");
 
 let path = {
@@ -16,7 +16,7 @@ let path = {
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
 		css: source_folder + "/scss/style.scss",
 		js: source_folder + "/js/script.js",
-		img: source_folder + "/img/**/*." + "(png|jpg|gif|ico|svg|webp)",
+		img: source_folder + "/img/**/*.{jpg,png,svg,ico,gif,webp}",
 		fonts: source_folder + "/fonts/*.ttf"
 	},
 
@@ -30,12 +30,12 @@ let path = {
 	clean: "./" + project_folder + "/"
 };
 
-let { src, dest } = require('gulp'),
-	gulp = require('gulp'),
+let { src, dest } = require("gulp"),
+	gulp = require("gulp"),
 	browsersync = require("browser-sync").create(),
 	fileinclude = require("gulp-file-include"),
 	del = require("del"),
-	// scss = require("gulp-sass"),
+	scss = require("gulp-sass"),
 	autoprefixer = require("gulp-autoprefixer"),
 	group_media = require("gulp-group-css-media-queries"),
 	clean_css = require("gulp-clean-css"),
@@ -44,20 +44,17 @@ let { src, dest } = require('gulp'),
 	imagemin = require("gulp-imagemin"),
 	webp = require("gulp-webp"),
 	webphtml = require("gulp-webp-html"),
-	webpcss = require("gulp-webpcss"),
-	svgSprite = require("gulp-svg-sprite"),
+	// webpcss = require("gulp-webpcss"),
 	ttf2woff = require("gulp-ttf2woff"),
 	ttf2woff2 = require("gulp-ttf2woff2"),
-	fonter = require("gulp-fonter");
+	svgSprite = require("gulp-svg-sprite");
 
 function browserSync(params) {
 	browsersync.init({
 		server: {
 			baseDir: "./" + project_folder + "/"
 		},
-
 		port: 3000,
-
 		notify: false
 	})
 }
@@ -86,10 +83,10 @@ function css() {
 				cascade: true
 			})
 		)
-		.pipe(webpcss({
-			webpClass: ".webp",
-			noWebpClass: ".no-webp"
-		}))
+		// .pipe(webpcss({
+		// 	webpClass: ".webp",
+		// 	noWebpClass: ".no-webp"
+		// }))
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
 		.pipe(
@@ -141,19 +138,12 @@ function images() {
 function fonts(params) {
 	src(path.src.fonts)
 		.pipe(ttf2woff())
-		.pipe(dest(path.build.fonts));
+		.pipe(dest(path.build.fonts))
+
 	return src(path.src.fonts)
 		.pipe(ttf2woff2())
-		.pipe(dest(path.build.fonts));
+		.pipe(dest(path.build.fonts))
 }
-
-gulp.task("otf2ttf", function () {
-	return src([source_folder + "/fonts/*.otf"])
-		.pipe(fonter({
-			formats: ["ttf"]
-		}))
-		.pipe(dest(source_folder + "/fonts/"));
-})
 
 gulp.task("svgSprite", function () {
 	return gulp.src([source_folder + "/iconsprite/*.svg"])
@@ -168,6 +158,7 @@ gulp.task("svgSprite", function () {
 })
 
 function fontsStyle(params) {
+
 	let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
 	if (file_content == '') {
 		fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
@@ -193,13 +184,14 @@ function watchFiles(params) {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
 	gulp.watch([path.watch.js], js);
+	gulp.watch([path.watch.img], images);
 }
 
-function clean(params) {
-	return del(path.clean)
+function cleanFiles(params) {
+	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(cleanFiles, gulp.parallel(js, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;

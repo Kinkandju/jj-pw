@@ -5,27 +5,38 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Резюме и портфолио фронтенд-разработчика">
-	<link href="js/script.min.js" as="script" rel="preload">
-	<link href="fonts/RussoOne-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
-	<link href="fonts/Forum-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
-	<link href="css/style.min.css" rel="stylesheet">
-	<title>Евгения Ямщикова - фронтенд-разработчик</title>
+	<link href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
+	<link href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous" rel="preload">
+	<link href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous" rel="preload">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Ямщикова Евгения - junior frontend-developer</title>
 </head>
 
 <body>
-	<header>
+	@@include('_header.html')
 
-	</header>
+	<main class="page-main">
+		<h2 class="visually-hidden">Программа компании</h2>
 
-	<main>
+		<!-- Приветствие -->
+		@@include('_greeting.html')
 
+		<!-- Контакты -->
+		@@include('_contacts.html')
+
+		<!-- Образование -->
+		@@include('_education.html')
+
+		<!-- Навыки -->
+		@@include('_skills.html')
+
+		<!-- Портфолио -->
+		@@include('_portfolio.html')
 	</main>
 
-	<footer>
+	@@include('_footer.html')
 
-	</footer>
-
+	<script src="js/script.min.js"></script>
 </body>
 
 </html>
