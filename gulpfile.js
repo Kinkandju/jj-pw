@@ -17,7 +17,7 @@ let path = {
 		css: source_folder + "/scss/style.scss",
 		js: source_folder + "/js/script.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,ico,gif,webp}",
-		fonts: source_folder + "/fonts/*.ttf"
+		fonts: source_folder + "/fonts/*.{woff,woff2}"
 	},
 
 	watch: {
@@ -35,7 +35,7 @@ let { src, dest } = require("gulp"),
 	browsersync = require("browser-sync").create(),
 	fileinclude = require("gulp-file-include"),
 	del = require("del"),
-	scss = require("gulp-sass"),
+	scss = require("gulp-sass")(require('sass')),
 	autoprefixer = require("gulp-autoprefixer"),
 	group_media = require("gulp-group-css-media-queries"),
 	clean_css = require("gulp-clean-css"),
@@ -45,8 +45,6 @@ let { src, dest } = require("gulp"),
 	webp = require("gulp-webp"),
 	webphtml = require("gulp-webp-html"),
 	// webpcss = require("gulp-webpcss"),
-	ttf2woff = require("gulp-ttf2woff"),
-	ttf2woff2 = require("gulp-ttf2woff2"),
 	svgSprite = require("gulp-svg-sprite");
 
 function browserSync(params) {
@@ -137,11 +135,6 @@ function images() {
 
 function fonts(params) {
 	src(path.src.fonts)
-		.pipe(ttf2woff())
-		.pipe(dest(path.build.fonts))
-
-	return src(path.src.fonts)
-		.pipe(ttf2woff2())
 		.pipe(dest(path.build.fonts))
 }
 
