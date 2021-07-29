@@ -16,6 +16,8 @@ html {
   body {
 	margin: 0;
 	padding: 0;
+
+	background: $lightgreen;
   
 	min-width: 320px;
   
@@ -35,7 +37,6 @@ html {
   }
 
   h2,
-  h3,
   p {
 	margin: 0;
 	padding: 0;
@@ -46,4 +47,17 @@ html {
 	padding: 0;
 	
 	list-style: none;
+  }
+
+  section {
+	margin: 0 0 30px 0;
+	padding: 80px 40px;
+
+	background: white;
+	border: 1px solid $lightgray;
+	border-radius: 6px;
+
+	&:last-child {
+		margin: 0;
+	}
   }
