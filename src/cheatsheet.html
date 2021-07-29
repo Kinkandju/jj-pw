@@ -5,9 +5,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
-	<link href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous" rel="preload">
-	<link href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous" rel="preload">
+	<meta name="description" content="Ямщикова Евгения - junior frontend-developer (шпаргалка)">
+	<link href="fonts/YanoneKaffeesatz-Light.woff2" as="font" crossorigin="anonymous" rel="preload">
+	<link href="fonts/YanoneKaffeesatz-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
+	<link href="fonts/YanoneKaffeesatz-Bold.woff2" as="font" crossorigin="anonymous" rel="preload">
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>Ямщикова Евгения - junior frontend-developer (шпаргалка)</title>
 </head>
@@ -156,6 +157,62 @@
 						После этого полученное значение приводится к числу (обычно в десятичной системе счисления).
 						Селектор, обладающий большим значением специфичности, обладает и большим приоритетом.
 						</p>
+						<table>
+							<caption>Посчитаем специфичность в нашем примере:</caption>
+
+							<tr>
+								<th>Селектор</th>
+								<th>a, b, c, d</th>
+								<th>Число</th>
+							</tr>
+
+							<tr>
+								<td>span</td>
+								<td>0, 0, 0, 1</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>div.cat-in-box</td>
+								<td>0, 0, 1, 1</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td>#floor.cat-in-box</td>
+								<td>0, 1, 1, 0</td>
+								<td>110</td>
+							</tr>
+							<tr>
+								<td>div span</td>
+								<td>0, 0, 0, 2</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>.cat-in-box</td>
+								<td>0, 0, 1, 0</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>#floor span</td>
+								<td>0, 1, 0, 1</td>
+								<td>101</td>
+							</tr>
+						</table>
+						<p>
+							<span>Важное исключение из правил - !important</span>
+							Когда при объявлении стиля используется модификатор !important, это объявление получает
+							наивысший приоритет среди всех прочих объявлений. Хотя технически модификатор !important не
+							имеет со специфичностью ничего общего, он непосредственно на неё влияет. Поскольку
+							!important усложняет отладку, нарушая естественное каскадирование ваших стилей, он не
+							приветствуется и следует избегать его использования. Если к элементу применимы два
+							взаимоисключающих стиля с модификатором !important, то применен будет стиль с большей
+							специфичностью.
+						</p>
+						<p>
+							<span>Не исключение - :not()</span>
+							Отрицающий псевдокласс :not не учитывается как псевдокласс при расчете специфичности. Однако
+							селекторы, расположенные внутри :not, при подсчете количества по типам селекторов
+							рассматриваются как обычные селекторы и учитываются.
+						</p>
 					</dd>
 
 					<dt class="cheatshett__term"></dt>
@@ -167,6 +224,36 @@
 			<!-- JavaScript -->
 			<section class="cheatsheet-js">
 				<h2>JavaScript</h2>
+
+				<dl class="cheatsheet__list">
+					<dt class="cheatshett__term">Объектная модель документа (DOM)</dt>
+					<dd class="cheatsheet__definition">
+						<p>Это программный интерфейс (API) для HTML и XML документов.
+							DOM предоставляет структурированное представление документа и определяет то, как эта
+							структура может быть доступна из программ, которые могут изменять содержимое, стиль и
+							структуру документа.
+							Представление DOM состоит из структурированной группы узлов и объектов, которые имеют
+							свойства и методы. По существу, DOM соединяет веб-страницу с языками описания сценариев либо
+							языками программирования.
+							DOM не является языком программирования, но без него JavaScript не имел бы никакой модели
+							или представления о веб-странице, HTML-документе, XML-документе и их элементах.
+							Каждый элемент в документе - весь документ в целом, заголовок, таблицы внутри документа,
+							заголовки таблицы, текст внутри ячеек таблицы - это части объектной документной модели для
+							этого документа, поэтому все они могут быть доступны и могут изменяться с помощью DOM и
+							скриптового языка наподобие JavaScript.
+							Вначале JavaScript и DOM были тесно связаны, но впоследствии они развились в различные
+							сущности. Содержимое страницы хранится в DOM и может быть доступно и изменяться с
+							использованием JavaScript, поэтому мы можем записать это в виде приблизительного равенства:
+							API (веб либо XML страница) = DOM + JS (язык описания скриптов)
+							DOM спроектирован таким образом, чтобы быть независимым от любого конкретного языка
+							программирования, обеспечивая структурное представление документа согласно единому и
+							последовательному API.
+						</p>
+					</dd>
+
+					<dt class="cheatshett__term"></dt>
+					<dd class="cheatsheet__definition"></dd>
+				</dl>
 
 			</section>
 
