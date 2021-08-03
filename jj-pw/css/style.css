@@ -43,6 +43,11 @@ body {
   margin: 0;
   padding: 0;
   background: #e4f5f2;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  background-attachment: fixed;
   min-width: 320px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -73,7 +78,7 @@ ul {
 section {
   margin: 0 0 30px 0;
   padding: 80px 40px;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid #ebebeb;
   border-radius: 6px;
 }
@@ -141,8 +146,30 @@ input[type=radio].visually-hidden {
   line-height: 30px;
 }
 
+.greeting__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.greeting__container img {
+  border-radius: 10px;
+}
+
 .greeting__description p {
   margin: 0 0 20px 0;
+  width: 95%;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 26px;

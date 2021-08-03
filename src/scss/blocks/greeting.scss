@@ -9,9 +9,24 @@
 	}
 }
 
+.greeting__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 100%;
+
+	img {
+		border-radius: 10px;
+	}
+}
+
 .greeting__description {
 	p {
 		margin: 0 0 20px 0;
+
+		width: 95%;
 
 		font-family: $font--yk-regular;
 		font-weight: 400;
