@@ -43,11 +43,6 @@ body {
   margin: 0;
   padding: 0;
   background: #e4f5f2;
-  background-image: url("../img/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-attachment: fixed;
   min-width: 320px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -77,7 +72,7 @@ ul {
 
 section {
   margin: 0 0 30px 0;
-  padding: 80px 40px;
+  padding: 40px 40px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #ebebeb;
   border-radius: 6px;
@@ -128,14 +123,18 @@ input[type=radio].visually-hidden {
 
 .page-header__item {
   margin: 0 0 0 30px;
-  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
-  font-weight: 300;
-  font-size: 34px;
-  line-height: 34px;
+  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .page-header__item:first-child {
   margin: 0;
+}
+
+.page-header__item a {
+  color: black;
 }
 
 .greeting h2 {
@@ -170,8 +169,8 @@ input[type=radio].visually-hidden {
 .greeting__description p {
   margin: 0 0 20px 0;
   width: 95%;
-  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
-  font-weight: 400;
+  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
+  font-weight: 300;
   font-size: 26px;
   line-height: 26px;
 }
@@ -226,14 +225,19 @@ input[type=radio].visually-hidden {
 
 .education__description p {
   margin: 0 0 20px 0;
-  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
-  font-weight: 400;
+  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
+  font-weight: 300;
   font-size: 26px;
   line-height: 26px;
 }
 
 .education__description p:last-child {
   margin: 0;
+}
+
+.education__description p span {
+  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .skills h2 {

@@ -13,13 +13,18 @@
 	p {
 		margin: 0 0 20px 0;
 
-		font-family: $font--yk-regular;
-		font-weight: 400;
+		font-family: $font--yk-light;
+		font-weight: 300;
 		font-size: 26px;
 		line-height: 26px;
 
 		&:last-child {
 			margin: 0;
+		}
+
+		span {
+		font-family: $font--yk-regular;
+		font-weight: 400;
 		}
 	}
 }
