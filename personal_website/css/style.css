@@ -42,7 +42,11 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background: #e4f5f2;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-attachment: fixed;
   min-width: 320px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
