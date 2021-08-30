@@ -1,2 +1,1 @@
-# jj-website
-Personal website
+# Персональный сайт
