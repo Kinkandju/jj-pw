@@ -12,14 +12,16 @@
 		}
 	}
 
-@import "fonts";
-@import "variables";
-@import "base";
-@import "scaffolding";
-@import "blocks/header";
-@import "blocks/greeting";
-@import "blocks/contacts";
-@import "blocks/education";
-@import "blocks/skills";
-@import "blocks/portfolio";
-@import "blocks/footer";
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "base.scss";
+@import "scaffolding.scss";
+@import "blocks/header.scss";
+@import "blocks/greeting.scss";
+@import "blocks/contacts.scss";
+@import "blocks/education.scss";
+@import "blocks/skills.scss";
+@import "blocks/portfolio.scss";
+@import "blocks/footer.scss";
+@import "blocks/services.scss";

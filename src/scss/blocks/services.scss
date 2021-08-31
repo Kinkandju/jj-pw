@@ -1,0 +1,27 @@
+.services-header {
+	margin: 0;
+	padding: 40px 0;
+}
+
+.services-header__list {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.services-header__item {
+	margin: 0 0 0 30px;
+
+	font-family: $font--yk-regular;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 30px;
+
+	&:first-child {
+		margin: 0;
+	}
+
+	a {
+		color: black;
+	}
+}

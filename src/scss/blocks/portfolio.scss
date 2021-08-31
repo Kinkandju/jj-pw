@@ -8,3 +8,47 @@
 		line-height: 30px;
 	}
 }
+
+.portfolio__item {
+	h3 {
+		font-family: $font--yk-regular;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 26px;
+	}
+}
+
+.portfolio__group {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+	p {
+		font-family: $font--yk-light;
+		font-weight: 300;
+		font-size: 26px;
+		line-height: 26px;
+
+		margin: 0 0 20px 20px;
+	}
+}
+
+.portfolio__description {
+	width: 90%;
+
+	ul {
+		list-style: disc;
+	}
+
+	li {
+		font-family: $font--yk-light;
+		font-weight: 300;
+		font-size: 26px;
+		line-height: 26px;
+
+		margin: 0 0 20px 40px;
+
+		width: 90%;
+	}
+}
