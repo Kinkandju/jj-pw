@@ -406,6 +406,7 @@ body {
 body {
   margin: 0;
   padding: 0;
+  background: #e4f5f2;
   background-image: url("../img/background-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -704,6 +705,38 @@ input[type=radio].visually-hidden {
 
 .services-header__item a {
   color: black;
+}
+
+.services-main h2 {
+  margin: 0 0 30px 0;
+  font-family: "Yanone Kaffeesatz", "YanoneKaffeesat-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.services__list {
+  margin: 0 0 0 40px;
+  list-style: disc;
+}
+
+.services__item {
+  margin: 0 0 15px 0;
+  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.services__item:last-child {
+  margin: 0;
+}
+
+.services__link {
+  font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
 }
 
 @media (min-width: 768px) {
