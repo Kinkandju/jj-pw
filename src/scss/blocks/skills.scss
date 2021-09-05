@@ -7,4 +7,36 @@
 		font-size: 30px;
 		line-height: 30px;
 	}
+
+	p {
+		margin: 0 0 20px 0;
+
+		font-family: $font--yk-light;
+		font-weight: 300;
+		font-size: 26px;
+		line-height: 26px;
+
+		:last-child {
+			margin: 0;
+		}
+	}
+}
+
+.skills__list {
+	margin: 0 0 0 20px;
+
+	list-style: disc;
+}
+
+.skills__item {
+	margin: 0 0 10px 0;
+
+	font-family: $font--yk-light;
+	font-weight: 300;
+	font-size: 26px;
+	line-height: 26px;
+}
+
+.skills__item:last-child {
+	margin: 0;
 }
