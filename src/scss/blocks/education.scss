@@ -1,6 +1,7 @@
 .education {
 	h2 {
 		margin: 0 0 30px 0;
+		padding: 0;
 
 		font-family: $font--yk-bold;
 		font-weight: 700;
@@ -12,6 +13,7 @@
 .education__description {
 	p {
 		margin: 0 0 20px 0;
+		padding: 0;
 
 		font-family: $font--yk-light;
 		font-weight: 300;
@@ -25,6 +27,18 @@
 		span {
 		font-family: $font--yk-regular;
 		font-weight: 400;
+		}
+
+		a {
+			color: black;
+			border-bottom: 1px solid black;
+
+			&:hover,
+			&:focus {
+				color: $darkgreen;
+				border-bottom: 1px solid $darkgreen;
+				transition: 0.5ms;
+			}
 		}
 	}
 }

@@ -11,6 +11,7 @@
 
 .services-header__item {
 	margin: 0 0 0 30px;
+	padding: 0;
 
 	font-family: $font--yk-regular;
 	font-weight: 400;
@@ -23,12 +24,20 @@
 
 	a {
 		color: black;
+
+		&:hover,
+		&:focus {
+			color: $green;
+			border-bottom: 2px solid $green;
+			transition: 0.5ms;
+		}
 	}
 }
 
 .services-main {
 	h2 {
 	margin: 0 0 30px 0;
+	padding: 0;
 
 	font-family: $font--yk-bold;
 	font-weight: 700;
@@ -39,21 +48,23 @@
 
 .services__list {
 	margin: 0 0 0 40px;
+	padding: 0;
 
 	list-style: disc;
 }
 
 .services__item {
 	margin: 0 0 15px 0;
+	padding: 0;
 
 	font-family: $font--yk-light;
 	font-weight: 300;
 	font-size: 26px;
 	line-height: 26px;
-}
 
-.services__item:last-child {
-	margin: 0;
+	&:last-child {
+		margin: 0;
+	}
 }
 
 .services__link {
@@ -61,4 +72,25 @@
 	font-weight: 400;
 	font-size: 26px;
 	line-height: 26px;
+
+	color: black;
+
+	&:hover,
+	&:focus {
+		color: $green;
+		border-bottom: 2px solid $green;
+		transition: 0.5ms;
+	}
+
+	&--yoksel {
+		color: black;
+		border-bottom: 1px solid black;
+
+		&:hover,
+		&:focus {
+			color: $darkgreen;
+			border-bottom: 1px solid $darkgreen;
+			transition: 0.5ms;
+	}
+	}
 }

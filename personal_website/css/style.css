@@ -492,6 +492,7 @@ input[type=radio].visually-hidden {
 
 .page-header__item {
   margin: 0 0 0 30px;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 30px;
@@ -506,8 +507,18 @@ input[type=radio].visually-hidden {
   color: black;
 }
 
+.page-header__item a:hover,
+.page-header__item a:focus {
+  color: #53ada3;
+  border-bottom: 2px solid #53ada3;
+  -webkit-transition: 0.5ms;
+  -o-transition: 0.5ms;
+  transition: 0.5ms;
+}
+
 .greeting h2 {
   margin: 0 0 30px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesat-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -537,6 +548,7 @@ input[type=radio].visually-hidden {
 
 .greeting__description p {
   margin: 0 0 20px 0;
+  padding: 0;
   width: 95%;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
@@ -550,6 +562,7 @@ input[type=radio].visually-hidden {
 
 .contacts h2 {
   margin: 0 0 30px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesat-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -558,6 +571,7 @@ input[type=radio].visually-hidden {
 
 .contacts__item {
   margin: 0 0 20px 0;
+  padding: 0;
 }
 
 .contacts__item:last-child {
@@ -578,14 +592,25 @@ input[type=radio].visually-hidden {
 
 .contacts__item a {
   margin: 0 0 0 20px;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 26px;
   line-height: 26px;
 }
 
+.contacts__item a:hover,
+.contacts__item a:focus {
+  color: #468a82;
+  border-bottom: 1px solid #468a82;
+  -webkit-transition: 0.5ms;
+  -o-transition: 0.5ms;
+  transition: 0.5ms;
+}
+
 .education h2 {
   margin: 0 0 30px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesat-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -594,6 +619,7 @@ input[type=radio].visually-hidden {
 
 .education__description p {
   margin: 0 0 20px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 26px;
@@ -609,45 +635,81 @@ input[type=radio].visually-hidden {
   font-weight: 400;
 }
 
+.education__description p a {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.education__description p a:hover,
+.education__description p a:focus {
+  color: #468a82;
+  border-bottom: 1px solid #468a82;
+  -webkit-transition: 0.5ms;
+  -o-transition: 0.5ms;
+  transition: 0.5ms;
+}
+
 .skills h2 {
   margin: 0 0 30px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesat-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
 }
 
-.skills p {
+.skills__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.skills__group p {
   margin: 0 0 20px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 26px;
   line-height: 26px;
 }
 
-.skills p :last-child {
+.skills__group:first-child {
+  width: 55%;
+}
+
+.skills__group:first-child p:last-child {
   margin: 0;
+}
+
+.skills__group:last-child {
+  margin: 0;
+  padding: 0 0 0 60px;
+  width: 45%;
 }
 
 .skills__list {
   margin: 0 0 0 20px;
+  padding: 0;
   list-style: disc;
 }
 
 .skills__item {
-  margin: 0 0 10px 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 26px;
   line-height: 26px;
 }
 
-.skills__item:last-child {
-  margin: 0;
-}
-
 .portfolio h2 {
   margin: 0 0 30px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesat-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -656,9 +718,12 @@ input[type=radio].visually-hidden {
 
 .portfolio__item {
   margin: 0 0 40px 0;
+  padding: 0;
 }
 
 .portfolio__item h3 {
+  margin: 0 0 20px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 26px;
@@ -685,30 +750,34 @@ input[type=radio].visually-hidden {
           align-items: center;
 }
 
-.portfolio__group p {
+.portfolio__description {
+  margin: 0 0 0 20px;
+  padding: 0;
+  width: 90%;
+}
+
+.portfolio__description p {
+  margin: 0 0 20px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 26px;
   line-height: 26px;
-  margin: 0 0 20px 0;
-}
-
-.portfolio__description {
-  margin: 0 0 0 20px;
-  width: 90%;
 }
 
 .portfolio__description ul {
-  margin: 20px 0 0 20px;
+  margin: 0 0 0 20px;
+  padding: 0;
   list-style: disc;
 }
 
 .portfolio__description li {
+  margin: 0 0 20px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 26px;
   line-height: 26px;
-  margin: 0 0 20px 0;
   width: 90%;
 }
 
@@ -718,6 +787,21 @@ input[type=radio].visually-hidden {
 
 .portfolio__description--acselerator {
   margin: 0 0 60px 0;
+  padding: 0;
+}
+
+.portfolio__description--acselerator a {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.portfolio__description--acselerator a:hover,
+.portfolio__description--acselerator a:focus {
+  color: #468a82;
+  border-bottom: 1px solid #468a82;
+  -webkit-transition: 0.5ms;
+  -o-transition: 0.5ms;
+  transition: 0.5ms;
 }
 
 .services-header {
@@ -740,6 +824,7 @@ input[type=radio].visually-hidden {
 
 .services-header__item {
   margin: 0 0 0 30px;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Regular", "Arial", sans-serif;
   font-weight: 400;
   font-size: 30px;
@@ -754,8 +839,18 @@ input[type=radio].visually-hidden {
   color: black;
 }
 
+.services-header__item a:hover,
+.services-header__item a:focus {
+  color: #53ada3;
+  border-bottom: 2px solid #53ada3;
+  -webkit-transition: 0.5ms;
+  -o-transition: 0.5ms;
+  transition: 0.5ms;
+}
+
 .services-main h2 {
   margin: 0 0 30px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesat-Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -764,11 +859,13 @@ input[type=radio].visually-hidden {
 
 .services__list {
   margin: 0 0 0 40px;
+  padding: 0;
   list-style: disc;
 }
 
 .services__item {
   margin: 0 0 15px 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", "YanoneKaffeesatz-Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 26px;
@@ -784,16 +881,40 @@ input[type=radio].visually-hidden {
   font-weight: 400;
   font-size: 26px;
   line-height: 26px;
+  color: black;
 }
 
-@media (min-width: 768px) {
+.services__link:hover,
+.services__link:focus {
+  color: #53ada3;
+  border-bottom: 2px solid #53ada3;
+  -webkit-transition: 0.5ms;
+  -o-transition: 0.5ms;
+  transition: 0.5ms;
+}
+
+.services__link--yoksel {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.services__link--yoksel:hover,
+.services__link--yoksel:focus {
+  color: #468a82;
+  border-bottom: 1px solid #468a82;
+  -webkit-transition: 0.5ms;
+  -o-transition: 0.5ms;
+  transition: 0.5ms;
+}
+
+@media (min-width: 767px) {
   .layout-container {
     padding: 0 30px;
     width: 708px;
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1299px) {
   .layout-container {
     padding: 0 40px;
     width: 1220px;
